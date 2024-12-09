@@ -27,7 +27,7 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => _MyAppState();
 }
 class _MyAppState extends State<MyApp> {
-  int _selectedSection = 2; // 0 for Login, 1 for Register, 2 for Home
+  int _selectedSection = 0; // 0 for Login, 1 for Register, 2 for Home
 
   @override
   void initState() {
@@ -517,7 +517,10 @@ class _HomeScreenState extends State<HomeScreen> {
             margin: EdgeInsets.symmetric(horizontal: 12),
             child: IconButton(
               icon: const Icon(Icons.logout_rounded, color: Colors.black,size: 25,),
-              onPressed: widget.onLogout,
+              onPressed: (){
+              //logout();
+              widget.onLogout;
+              },
             ),
           )
         ],
